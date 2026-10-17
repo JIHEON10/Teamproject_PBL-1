@@ -6,7 +6,7 @@ import myClass.DB_Element;
  *  DB_Element를 상속한 책, 이용자 객체를 저장하고 관리하는 제네릭 데이터베이스 클래스
  *
  * @author (9팀)
- * @version (202.10.21)
+ * @version (2026.10.17)
  */
 public class LibDB<T extends DB_Element>
 {
@@ -33,9 +33,10 @@ public class LibDB<T extends DB_Element>
      */
     public T findElement(String id)
     {
-        for (int i=0; i<db.size(); i++)
+        Iterator<T> it = db.iterator();
+        while (it.hasNext())
         {
-            T element = db.get(i);
+            T element = it.next();
             
             if (element.getID().equals(id))
             {
@@ -49,9 +50,9 @@ public class LibDB<T extends DB_Element>
      */
     public void printAllElements()
     {
-        for (int i=0; i<db.size(); i++)
+        for (T element : db)
         {
-            System.out.println(db.get(i));
+            System.out.println(element);
         }
     }
 }

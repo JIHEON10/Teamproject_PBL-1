@@ -23,7 +23,7 @@ public class LoanDB
      * 대출 정보를 추가한다.
      *
      * @param user 이용자
-     * @param book 책
+     * @param book 책 
      */
     public void addLoan(User user, Book book)
     {
