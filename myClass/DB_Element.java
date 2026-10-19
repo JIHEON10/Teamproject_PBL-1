@@ -6,7 +6,6 @@ package myClass;
  * @author (9팀)
  * @version (2026.10.21)
  */
-
 public abstract class DB_Element
 {   
     /**
