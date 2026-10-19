@@ -1,0 +1,12 @@
+#BlueJ class context
+#Mon Oct 19 21:58:33 KST 2026
+comment0.target=Book
+comment0.text=\r\n \uCC45 \uAC1D\uCCB4 Book \uD074\uB798\uC2A4\r\n\r\n @author (9\uD300)\r\n @version (2026.10.21)\r\n
+comment1.params=author bookID publisher title year
+comment1.target=Book(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)
+comment1.text=\r\n \uCC45 \uAC1D\uCCB4\uB97C \uC0DD\uC131\uD55C\uB2E4.\r\n\r\n @param author \uCC45\uC758 \uC800\uC790\r\n @param bookID \uCC45\uC758 \uB4F1\uB85D \uBC88\uD638\r\n @param publisher \uCC45\uC758 \uCD9C\uD310\uC0AC\r\n @param title \uCC45\uC758 \uC81C\uBAA9\r\n @param year \uCC45\uC758 \uCD9C\uD310 \uC5F0\uB3C4\r\n
+comment2.target=java.lang.String getID()
+comment2.text=\r\n \uCC45\uC758 \uB4F1\uB85D \uBC88\uD638\uB97C \uBC18\uD658\uD55C\uB2E4.\r\n\r\n @return \uCC45\uC758 \uB4F1\uB85D \uBC88\uD638 (bookID)\r\n
+comment3.target=java.lang.String toString()
+comment3.text=\r\n \uCC45\uC758 \uB4F1\uB85D \uBC88\uD638, \uC81C\uBAA9, \uC800\uC790, \uCD9C\uD310\uC0AC, \uCD9C\uD310 \uC5F0\uB3C4\uB97C \uBB38\uC790\uC5F4\uB85C \uBC18\uD658\uD55C\uB2E4.\r\n\r\n @return "(\uB4F1\uB85D \uBC88\uD638) \uC81C\uBAA9, \uC800\uC790, \uCD9C\uD310\uC0AC, \uCD9C\uD310 \uC5F0\uB3C4" \uD615\uC2DD\uC758 \uCC45 \uC815\uBCF4\r\n
+numComments=4

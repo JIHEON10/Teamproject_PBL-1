@@ -1,0 +1,12 @@
+#BlueJ class context
+#Mon Oct 19 21:58:41 KST 2026
+comment0.target=User
+comment0.text=\r\n \uC774\uC6A9\uC790 \uAC1D\uCCB4 User \uD074\uB798\uC2A4\r\n\r\n @author (9\uD300)\r\n @version (2026.10.21)\r\n
+comment1.params=stID name
+comment1.target=User(int, java.lang.String)
+comment1.text=\r\n  \uC774\uC6A9\uC790 \uAC1D\uCCB4\uB97C \uC0DD\uC131\uD55C\uB2E4.\r\n\r\n @param stID \uC774\uC6A9\uC790\uC758 \uD559\uBC88\r\n @param name \uC774\uC6A9\uC790\uC758 \uC774\uB984\r\n
+comment2.target=java.lang.String getID()
+comment2.text=\r\n \uC774\uC6A9\uC790\uC758 \uD559\uBC88\uC744 \uBB38\uC790\uC5F4\uB85C \uBC18\uD658\uD55C\uB2E4.\r\n\r\n @return \uC774\uC6A9\uC790\uC758 \uD559\uBC88\r\n
+comment3.target=java.lang.String toString()
+comment3.text=\r\n \uC774\uC6A9\uC790\uC758 \uD559\uBC88\uACFC \uC774\uB984\uC744 \uBB38\uC790\uC5F4\uB85C \uBC18\uD658\uD55C\uB2E4.\r\n\r\n @return "[\uD559\uBC88] \uC774\uB984" \uD615\uC2DD\uC758 \uC774\uC6A9\uC790 \uC815\uBCF4\r\n
+numComments=4
