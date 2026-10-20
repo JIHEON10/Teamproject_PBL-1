@@ -9,13 +9,10 @@ import myClass.*;
  */
 public class LibraryManagementSystem
 {
-    //bookDB<> = LibDB<Book>
-    //loanDB<> = HashMap<User,Book>
-    //userDB<> = LibDB<User>
     LibDB<Book> bookDB;
     HashMap<User, Book> loanDB;
     LibDB<User> userDB;
-    //private 적어야하는지
+    //private 적어야하는지?
     
     /**
      * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
@@ -25,7 +22,9 @@ public class LibraryManagementSystem
      */
     public LibraryManagementSystem()
     {
-        //
+        bookDB = new LibDB<>();
+        loanDB = new HashMap<>();
+        userDB = new LibDB<>();
     }
 
     /**
@@ -36,7 +35,13 @@ public class LibraryManagementSystem
      */
     public void borrowBook(String userID, String bookID)
     {
-        //e
+        User user = userDB.findElement(userID);
+        Book book = bookDB.findElement(bookID);
+        
+        if (user !=null && book != null)
+        {
+            loanDB.put(user,book);
+        }
     }
     
     /**
@@ -47,7 +52,7 @@ public class LibraryManagementSystem
      */
     public <T extends DB_Element> void printDB(LibDB<T>db)
     {
-        // 메소드 재확인 필요
+        db.printAllElements();
     }
     
     /**
@@ -58,7 +63,9 @@ public class LibraryManagementSystem
      */
     public void printLoanList()
     {
-        //
+        System.out.println("----- 대출 현황 -----");
+        // 출력부분 구현(getkey랑 getvalue , for-each문 써야할듯해요)
+        System.out.println("--------------------");
     }
     
     /**
