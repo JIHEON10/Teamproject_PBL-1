@@ -76,7 +76,7 @@ public class LibraryManagementSystem
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
-        return bookDB;
+        return bookDB; //수정필요, 파일 읽을 수 있게? 아니면 app에서?
     }
     
     /**
@@ -87,6 +87,6 @@ public class LibraryManagementSystem
      */
     public LibDB<User> setUserDB(String userFile)
     {
-        return userDB;
+        return userDB; //수정필요, 파일 읽을 수 있게? 아니면 app에서?
     }
 }
