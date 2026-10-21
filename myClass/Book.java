@@ -13,7 +13,7 @@ public class Book extends DB_Element
     private String publisher;  
     private String title; 
     private int year;
-    
+
     /**
      * 책 객체를 생성한다.
      *
@@ -31,6 +31,7 @@ public class Book extends DB_Element
         this.title = title;
         this.year = year;
     }
+
     /**
      * 책의 등록 번호를 반환한다.
      *
@@ -40,6 +41,7 @@ public class Book extends DB_Element
     {
         return bookID;
     }
+
     /**
      * 책의 등록 번호, 제목, 저자, 출판사, 출판 연도를 문자열로 반환한다.
      *

@@ -1,6 +1,5 @@
 package myClass;
 
-
 /**
  * 이용자 객체 User 클래스
  *
@@ -23,6 +22,7 @@ public class User extends DB_Element
         this.stID = stID;
         this.name = name;
     }
+
     /**
      * 이용자의 학번을 문자열로 반환한다.
      *
@@ -32,6 +32,7 @@ public class User extends DB_Element
     {
         return String.valueOf(stID);
     }
+
     /**
      * 이용자의 학번과 이름을 문자열로 반환한다.
      *
