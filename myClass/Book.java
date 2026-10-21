@@ -6,7 +6,7 @@ package myClass;
  * @author (9팀)
  * @version (2026.10.21)
  */
-public class Book extends DB_Element
+public class Book extends DB_Element //p259 자바의 상속 선언
 {
     private String author; 
     private String bookID;
@@ -47,7 +47,7 @@ public class Book extends DB_Element
      *
      * @return "(등록 번호) 제목, 저자, 출판사, 출판 연도" 형식의 책 정보
      */
-    public String toString()
+    public String toString() // P353 객체를 문자열로 반환, toString()메소드
     {
         return "(" +bookID+ ") " +title+ ", " +author+ ", " +publisher+ ", " +year;
     }

@@ -13,7 +13,7 @@ public class App
      *
      */
     public static void main(String[] args)
-    {
+    {   
         // 1: 생성한다() -> libMS : LibraryManagementSystem으로
         LibraryManagementSystem libMS = new LibraryManagementSystem();
 

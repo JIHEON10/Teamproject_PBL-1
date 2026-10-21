@@ -12,7 +12,7 @@ import java.io.*;
 public class LibraryManagementSystem
 {
     LibDB<Book> bookDB;
-    HashMap<User, Book> loanDB;
+    HashMap<User, Book> loanDB; //p424 HashMap<K,V>
     LibDB<User> userDB;
     
     /**
@@ -63,7 +63,8 @@ public class LibraryManagementSystem
         Set<User> keySet = loanDB.keySet();
         Iterator<User> it = keySet.iterator();
         
-        while(it.hasNext())
+        //p121 while문        
+        while(it.hasNext()) 
         {
             User user = it.next();
             Book book = loanDB.get(user);
@@ -81,7 +82,7 @@ public class LibraryManagementSystem
     public LibDB<Book> setBookDB(String bookFile)
     {
         bookDB = new LibDB<Book>();
-
+        //p154 try-catch-finally
         try 
         {
             File file = new File(bookFile);
@@ -131,12 +132,12 @@ public class LibraryManagementSystem
 
         try 
         {
-            File file = new File(userFile);
+            File file = new File(userFile); //p463 FileReader를 이용한 텍스트 파일읽기
             FileReader fin = new FileReader(file);
             Scanner scanner = new Scanner(fin);
-
-            while (scanner.hasNext()) {
-                String line = scanner.nextLine();
+            
+            while (scanner.hasNext()) { //p.495 파일의 끝까지 반복하여 읽는다
+                String line = scanner.nextLine(); // 한 라인 단위로 읽는다
 
                 Scanner token = new Scanner(line);
                 token.useDelimiter("/");

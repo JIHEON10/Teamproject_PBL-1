@@ -10,7 +10,7 @@ import myClass.DB_Element;
  */
 public class LibDB<T extends DB_Element>
 {
-    private ArrayList<T> db;
+    private ArrayList<T> db; //p416 ArrayList
 
     public LibDB()
     {
@@ -35,7 +35,7 @@ public class LibDB<T extends DB_Element>
      */
     public T findElement(String id)
     {
-        Iterator<T> it = db.iterator();
+        Iterator<T> it = db.iterator(); //p422 컬렉션의 순차 검색을 위한 Itertor
         while (it.hasNext())
         {
             T element = it.next();

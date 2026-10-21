@@ -6,7 +6,7 @@ package myClass;
  * @author (9팀)
  * @version (2026.10.21)
  */
-public class User extends DB_Element
+public class User extends DB_Element //p259 자바의 상속 선언
 {
     private String name;
     private Integer stID;
@@ -38,7 +38,7 @@ public class User extends DB_Element
      *
      * @return "[학번] 이름" 형식의 이용자 정보
      */
-    public String toString()
+    public String toString() // P353 객체를 문자열로 반환, toString()메소드
     {
         return "[" +stID+ "] " +name;
     }
