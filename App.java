@@ -36,9 +36,9 @@ public class App
         // 6: 대출 작업 수행
         libMS.borrowBook("2025320001","B02");
         //6.2
-        libMS.borrowBook("2025320002","B03");
+        libMS.borrowBook("2024320002","B03");
         //6.3
-        libMS.borrowBook("2025320003","B04");
+        libMS.borrowBook("2023320003","B04");
 
         // 7: 대출 현황 출력
         libMS.printLoanList();

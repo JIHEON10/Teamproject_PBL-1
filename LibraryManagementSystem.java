@@ -60,7 +60,15 @@ public class LibraryManagementSystem
     public void printLoanList()
     {
         System.out.println("----- 대출 현황 -----");
-        // 출력부분 구현(getkey랑 getvalue , for-each문 써야할듯해요)
+        Set<User> keySet = loanDB.keySet();
+        Iterator<User> it = keySet.iterator();
+        
+        while(it.hasNext())
+        {
+            User user = it.next();
+            Book book = loanDB.get(user);
+            System.out.println(user+ " ===> " +book);
+        }
         System.out.println("--------------------");
     }
 
@@ -74,7 +82,8 @@ public class LibraryManagementSystem
     {
         bookDB = new LibDB<Book>();
 
-        try {
+        try 
+        {
             File file = new File(bookFile);
             FileReader fin = new FileReader(file);
             Scanner scanner = new Scanner(fin);
@@ -101,7 +110,9 @@ public class LibraryManagementSystem
 
             scanner.close();
 
-        } catch (IOException e) {
+        } 
+        catch (IOException e)
+        {
             System.out.println("도서 파일 입출력 오류");
         }
 
