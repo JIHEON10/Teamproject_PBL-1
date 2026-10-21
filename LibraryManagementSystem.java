@@ -72,7 +72,40 @@ public class LibraryManagementSystem
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
-        return bookDB; //수정필요, 파일 읽을 수 있게? 아니면 app에서?
+        bookDB = new LibDB<Book>();
+
+        try {
+            File file = new File(bookFile);
+            FileReader fin = new FileReader(file);
+            Scanner scanner = new Scanner(fin);
+
+            while (scanner.hasNext()) {
+                String line = scanner.nextLine();
+
+                Scanner token = new Scanner(line);
+                token.useDelimiter("/");
+
+                String bookID = token.next();
+                String title = token.next();
+                String author = token.next();
+                String publisher = token.next();
+                String year1 = token.next();
+
+                int year = Integer.parseInt(year1);
+
+                Book book = new Book(author, bookID, publisher, title, year);
+                bookDB.addElement(book);
+
+                token.close();
+            }
+
+            scanner.close();
+
+        } catch (IOException e) {
+            System.out.println("도서 파일 입출력 오류");
+        }
+
+        return bookDB;
     }
 
     /**
@@ -83,6 +116,38 @@ public class LibraryManagementSystem
      */
     public LibDB<User> setUserDB(String userFile)
     {
-        return userDB; //수정필요, 파일 읽을 수 있게? 아니면 app에서?
+        userDB = new LibDB<User>();
+
+        try 
+        {
+            File file = new File(userFile);
+            FileReader fin = new FileReader(file);
+            Scanner scanner = new Scanner(fin);
+
+            while (scanner.hasNext()) {
+                String line = scanner.nextLine();
+
+                Scanner token = new Scanner(line);
+                token.useDelimiter("/");
+
+                String id = token.next();
+                String name = token.next();
+                int stID = Integer.parseInt(id);
+
+                User user = new User(stID, name);
+                userDB.addElement(user);
+
+                token.close();
+            }
+
+            scanner.close();
+
+        } 
+        catch (IOException e) 
+        {
+            System.out.println("사용자 파일 입출력 오류");
+        }
+
+        return userDB;
     }
 }
