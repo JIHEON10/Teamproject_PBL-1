@@ -1,10 +1,12 @@
 import java.util.*;
 import DataBase.*;
 import myClass.*;
+import java.io.*;
 /**
- * LibraryManagementSystem 클래스의 설명을 작성하세요.
+ * 도서관관리시스템 내에서 수행하는 여러 처리 작업을 정의해놓은
+ * LibraryManagementSystem 클래스
  *
- * @author (작성자 이름)
+ * @author (9팀)
  * @version (버전 번호 또는 작성한 날짜)
  */
 public class LibraryManagementSystem
@@ -13,12 +15,9 @@ public class LibraryManagementSystem
     HashMap<User, Book> loanDB;
     LibDB<User> userDB;
     //private 적어야하는지?
-    
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * LibraryManagementSystem 생성자
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
      */
     public LibraryManagementSystem()
     {
@@ -28,10 +27,10 @@ public class LibraryManagementSystem
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * 대출 작업을 수행하는 메소드 borrowBook
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param userID 파라미터
+     * @param bookID 파라미터
      */
     public void borrowBook(String userID, String bookID)
     {
@@ -45,10 +44,9 @@ public class LibraryManagementSystem
     }
     
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * DB 출력 메소드 printDB
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param db 파라미터
      */
     public <T extends DB_Element> void printDB(LibDB<T>db)
     {
@@ -56,10 +54,8 @@ public class LibraryManagementSystem
     }
     
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * 메소드 printLoanList
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
      */
     public void printLoanList()
     {
@@ -69,10 +65,10 @@ public class LibraryManagementSystem
     }
     
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * 메소드 setBookDB
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param bookFile 파라미터
+     * @return LibDB<Book>
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
@@ -80,10 +76,10 @@ public class LibraryManagementSystem
     }
     
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * 메소드 setUserDB
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param userFile 파라미터
+     * @return LibDB<User>
      */
     public LibDB<User> setUserDB(String userFile)
     {
