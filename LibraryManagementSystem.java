@@ -14,7 +14,7 @@ public class LibraryManagementSystem
     LibDB<Book> bookDB;
     HashMap<User, Book> loanDB;
     LibDB<User> userDB;
-    //private 적어야하는지?
+    
     /**
      * LibraryManagementSystem 생성자, 객체를 생성함
      *
